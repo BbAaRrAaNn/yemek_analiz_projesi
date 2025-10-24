@@ -1,0 +1,47 @@
+# YEMEK ANALİZ PROJESİ - VERİ ANALİZ RAPORU
+============================================================
+
+## 1. GENEL BİLGİLER
+- Proje Adı: Üniversite Yemekhanesinde Derin Öğrenme Tabanlı Tercih Analizi
+- Analiz Tarihi: 2025-10-21 23:33:56
+
+## 2. VERİ SETİ İSTATİSTİKLERİ
+
+### 2.1 Kategori Dağılımı
+        Kategori  Sayı
+        Pilavlar    96
+   Etli yemekler    92
+        Tatlılar    92
+     Kızartmalar    92
+Soslu makarnalar    90
+ Sebze yemekleri    89
+       Salatalar    88
+        Çorbalar    81
+
+### 2.2 Puan İstatistikleri
+            Metrik Değer
+          Ortalama  3.24
+            Medyan  3.00
+         Std Sapma  1.40
+           Minimum   1.0
+          Maksimum   5.0
+Toplam Puan Sayısı  2945
+
+### 2.3 Görsel Veri İstatistikleri
+         Metrik  Değer
+  Toplam Görsel     64
+Ort. Boyut (KB) 176.55
+ Min Boyut (KB)  80.36
+ Max Boyut (KB) 271.82
+
+## 3. SONUÇLAR
+
+Veri seti başarıyla analiz edilmiştir. Toplam 8 kategoride 720 anket yanıtı ve 64 görsel bulunmaktadır.
+Genel memnuniyet ortalaması: 3.24/5.00
+
+## 4. ÜRETİLEN ÇIKTILAR
+
+- kategori_dagilimi.png
+- puan_dagilimi.png
+- veri_analiz_raporu.txt
+

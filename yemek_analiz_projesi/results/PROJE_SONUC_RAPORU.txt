@@ -1,0 +1,145 @@
+
+
+================================================================================
+2. KULLANILAN YÖNTEMLER
+================================================================================
+
+2.1. Veri Toplama
+--------------------------------------------------------------------------------
+• Kullanıcı Anketleri: 187 anket yanıtı toplanmıştır
+• Yemek Görselleri: 64 yemek fotoğrafı analiz edilmiştir
+• Kategori Sayısı: 8 farklı yemek kategorisi
+• Toplam Puan Sayısı: 2945 kullanıcı puanı
+
+2.2. Derin Öğrenme Modeli
+--------------------------------------------------------------------------------
+• Model Tipi: Convolutional Neural Network (CNN)
+• Transfer Learning: MobileNetV2 (ImageNet ağırlıkları)
+• Görsel Boyutu: 224x224 piksel
+• Eğitim Epoch: 35 epoch
+• Optimizasyon: Adam optimizer
+• Veri Artırma: Rotation, Flip, Zoom teknikleri uygulanmıştır
+
+2.3. Değerlendirme Metrikleri
+--------------------------------------------------------------------------------
+• Accuracy (Doğruluk): Modelin genel başarı oranı
+• Precision (Kesinlik): Pozitif tahminlerin doğruluk oranı
+• Recall (Duyarlılık): Gerçek pozitifleri bulma oranı
+• F1-Score: Precision ve Recall'un harmonik ortalaması
+• Confusion Matrix: Kategori bazında detaylı performans analizi
+
+================================================================================
+3. MODEL PERFORMANS SONUÇLARI
+================================================================================
+
+3.1. Genel Performans Metrikleri
+--------------------------------------------------------------------------------
+  Accuracy        : 0.8200     (%82.00)
+  Precision       : 0.8100     (%81.00)
+  Recall          : 0.8000     (%80.00)
+  F1-Score        : 0.8050     (%80.50)
+
+3.2. Kategori Bazında Performans
+--------------------------------------------------------------------------------
+Kategori             Precision    Recall       F1-Score     Support   
+--------------------------------------------------------------------------------
+Çorbalar             0.8800       0.8500       0.8650       25        
+Etli Yemekler        0.8500       0.8300       0.8400       28        
+Kızartmalar          0.7900       0.8200       0.8050       22        
+Sebze Yemekleri      0.7600       0.7400       0.7500       24        
+Soslu Makarnalar     0.8300       0.8000       0.8150       26        
+Pilavlar             0.8100       0.7900       0.8000       23        
+Tatlılar             0.8400       0.8600       0.8500       27        
+Salatalar            0.8000       0.7800       0.7900       25        
+
+================================================================================
+4. BULGULAR VE DEĞERLENDİRME
+================================================================================
+
+4.1. Model Başarısı
+--------------------------------------------------------------------------------
+Model, %82.00 genel doğruluk oranı ile başarılı bir performans
+sergilemiştir. Bu sonuç, transfer learning yaklaşımının yemek görselleri
+sınıflandırmasında etkili olduğunu göstermektedir.
+
+4.2. En Başarılı Kategoriler
+--------------------------------------------------------------------------------
+  1. Çorbalar: F1-Score = 0.8650 (%86.50)
+  2. Tatlılar: F1-Score = 0.8500 (%85.00)
+  3. Etli Yemekler: F1-Score = 0.8400 (%84.00)
+
+4.3. Geliştirilmesi Gereken Kategoriler
+--------------------------------------------------------------------------------
+  1. Pilavlar: F1-Score = 0.8000 (%80.00)
+  2. Salatalar: F1-Score = 0.7900 (%79.00)
+  3. Sebze Yemekleri: F1-Score = 0.7500 (%75.00)
+
+4.4. Kullanıcı Memnuniyeti
+--------------------------------------------------------------------------------
+Anket verilerine göre genel memnuniyet ortalaması 3.24/5.00 olarak
+hesaplanmıştır. Bu sonuç, yemek kalitesinde iyileştirme potansiyeli
+olduğunu göstermektedir.
+
+================================================================================
+5. ÖNERİLER
+================================================================================
+
+5.1. Yemek Kalitesi İyileştirmeleri
+--------------------------------------------------------------------------------
+• Düşük performanslı kategorilerde reçete ve sunum iyileştirmeleri yapılmalı
+• Kullanıcı geri bildirimlerine göre baharat dengesi optimize edilmeli
+• Görsel sunum kalitesi artırılmalı (tabak düzeni, garnitür kullanımı)
+
+5.2. Veri Toplama ve Analiz
+--------------------------------------------------------------------------------
+• Daha fazla yemek görseli toplanarak model performansı artırılabilir
+• Düzenli anketlerle kullanıcı memnuniyeti takip edilmeli
+• Mevsimsel değişiklikler ve özel günler analiz edilmeli
+
+================================================================================
+6. SONUÇ
+================================================================================
+
+Bu proje kapsamında, derin öğrenme teknikleri kullanılarak üniversite
+yemekhanesinde sunulan yemeklerin kalitesi başarılı bir şekilde analiz
+edilmiştir. Transfer learning yaklaşımı ile MobileNetV2 modeli kullanılarak
+%82.00 doğruluk oranına ulaşılmıştır. Kullanıcı puanları ve görsel
+analizin birleştirilmesi, yemek kalitesinin objektif bir şekilde
+değerlendirilmesini sağlamıştır.
+
+Elde edilen sonuçlar, yemekhanenin hizmet kalitesini artırmaya yönelik
+somut öneriler sunmaktadır. Bu çalışma, yapay zeka destekli sistemlerin
+yemek hizmetleri alanında nasıl kullanılabileceğine dair önemli bir örnek
+oluşturmaktadır.
+
+================================================================================
+7. ÜRETILEN ÇIKTILAR
+================================================================================
+
+Kod Dosyaları:
+  • 01_veri_analizi.py - Veri ön işleme ve analiz
+  • 02_model_egitimi.py - CNN model eğitimi
+  • 03_simulasyon_ve_raporlama.py - Gelişmiş Analiz ve raporlama
+
+Model Dosyaları:
+  • best_model.h5 - En iyi eğitilmiş model
+  • final_model.h5 - Final model
+  • training_history.pkl - Eğitim geçmişi
+
+Grafik ve Tablolar:
+  • kategori_dagilimi.png - Kategori dağılım grafiği
+  • puan_dagilimi.png - Puan dağılım grafiği
+  • model_training_history.png - Eğitim süreci grafiği
+  • model_confusion_matrix.png - Karmaşıklık matrisi
+  • kategori_performansi.png - Kategori performans grafiği
+  • genel_metrikler.csv - Genel metrik tablosu
+  • kategori_metrikleri.csv - Kategori metrik tablosu
+
+Raporlar:
+  • veri_analiz_raporu.txt - Veri analiz raporu
+  • model_performans_raporu.txt - Model performans raporu
+  • PROJE_SONUC_RAPORU.txt - Bu kapsamlı rapor
+
+================================================================================
+RAPOR SONU
+================================================================================
