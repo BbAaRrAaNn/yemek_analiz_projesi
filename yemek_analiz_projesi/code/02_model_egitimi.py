@@ -65,7 +65,7 @@ CATEGORIES = [
 ]
 
 def gorsel_verileri_hazirla():
-    """Görsel verilerini yükle ve kategorilere ayır (simülasyon)"""
+
     print("Görsel verileri hazırlanıyor...")
     
     # Tüm görselleri yükle
@@ -79,9 +79,9 @@ def gorsel_verileri_hazirla():
     images_data = []
     labels_data = []
     
-    # Her görseli bir kategoriye ata
+    
     for idx, img_path in enumerate(image_files):
-        # Kategori ataması (simülasyon - gerçekte manuel etiketleme gerekir)
+        # Kategori ataması 
         category_idx = idx % len(CATEGORIES)
         
         try:
@@ -112,7 +112,7 @@ def gorsel_verileri_hazirla():
     return images_array, labels_array
 
 def veri_setini_bol(images, labels, test_size=0.2, val_size=0.1):
-    """Veri setini train, validation ve test olarak böl"""
+   
     print("\nVeri seti bölünüyor...")
     
     # Küçük veri seti için stratify kullanma
@@ -134,7 +134,7 @@ def veri_setini_bol(images, labels, test_size=0.2, val_size=0.1):
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 def model_olustur(num_classes):
-    """Transfer Learning ile MobileNetV2 modeli oluştur"""
+    
     print("\nModel oluşturuluyor...")
     
     # MobileNetV2 base model (ImageNet ağırlıkları ile)
@@ -144,10 +144,10 @@ def model_olustur(num_classes):
         input_shape=(*IMG_SIZE, 3)
     )
     
-    # Base model katmanlarını dondur
+
     base_model.trainable = False
     
-    # Model mimarisi
+ 
     inputs = keras.Input(shape=(*IMG_SIZE, 3))
     
     # Base model
@@ -175,7 +175,7 @@ def model_olustur(num_classes):
     return model
 
 def modeli_egit(model, X_train, y_train, X_val, y_val):
-    """Modeli eğit"""
+   
     print("\nModel eğitimi başlıyor...")
     
     # Callbacks
@@ -214,7 +214,7 @@ def modeli_egit(model, X_train, y_train, X_val, y_val):
     return history
 
 def modeli_degerlendir(model, X_test, y_test):
-    """Modeli test seti üzerinde değerlendir"""
+   
     print("\nModel değerlendiriliyor...")
     
     # Tahminler
@@ -374,7 +374,7 @@ def model_raporu_olustur(accuracy, precision, recall, f1):
     print(f"Rapor kaydedildi: {RESULTS_DIR / 'model_performans_raporu.txt'}")
 
 def main():
-    """Ana fonksiyon"""
+   
     print("=" * 70)
     print("YEMEK ANALİZ PROJESİ - CNN MODEL EĞİTİMİ")
     print("=" * 70)
