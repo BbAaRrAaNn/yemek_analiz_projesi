@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Yemek Analiz Projesi - Veri Ön İşleme ve Analiz
-"""
+
 
 import pandas as pd
 import numpy as np
@@ -181,7 +179,7 @@ def gorsel_veri_analizi():
     return len(image_files), gorsel_df
 
 def ozet_rapor_olustur(kategori_df, puan_array, stats_df, gorsel_count, gorsel_df):
-    """Özet rapor oluştur"""
+    
     print("\n=== Özet Rapor Oluşturuluyor ===")
     
     rapor = []
@@ -227,7 +225,7 @@ def ozet_rapor_olustur(kategori_df, puan_array, stats_df, gorsel_count, gorsel_d
     print(f"Rapor kaydedildi: {RESULTS_DIR / 'veri_analiz_raporu.txt'}")
 
 def main():
-    """Ana fonksiyon"""
+   
     print("=" * 60)
     print("YEMEK ANALİZ PROJESİ - VERİ ANALİZİ")
     print("=" * 60)
