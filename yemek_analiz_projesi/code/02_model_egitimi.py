@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Yemek Analiz Projesi - CNN Modeli ile Görsel Sınıflandırma
-Transfer Learning ile EfficientNetB0 kullanılarak yemek görselleri sınıflandırılacak
-"""
+
+#Yemek Analiz Projesi - CNN Modeli ile Görsel Sınıflandırma
+
 
 import numpy as np
 import pandas as pd
